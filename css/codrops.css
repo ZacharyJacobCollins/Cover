@@ -1,0 +1,215 @@
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'codropsicons';
+	src:url('../fonts/codropsicons/codropsicons.eot');
+	src:url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/codropsicons/codropsicons.woff') format('woff'),
+		url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
+		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+}
+
+*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after {display: table;  content: ''; }
+.clearfix:after { clear: both; }
+
+body {
+	font-family: "Avenir Next", Avenir, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
+	color: #444;
+	background: #fff;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	outline: none;
+	color: #63f8d3;
+	text-decoration: none;
+}
+
+a:hover, a:focus {
+	color: #57d8b8;
+}
+
+.hidden {
+	position: absolute;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+}
+
+/* Content */
+.content {
+	padding: 3em 0;
+}
+
+.intro {
+	padding: 1em;
+	max-width: 1000px;
+	text-align: center;
+	font-size: 2em;
+}
+
+/* Header */
+.codrops-header {
+	padding: 2em 1em 4em;
+	color: #fff;
+	height: 100vh;
+	min-height: 500px;
+	text-align: center;
+	background: #2C292F no-repeat left 50% bottom 40px;
+}
+
+.codrops-header h1 {
+	margin: 0.5em 0 0;
+	letter-spacing: -1px;
+	font-size: 5em;
+	line-height: 1;
+}
+
+.codrops-header h1 span {
+	font-weight: normal;
+	display: block;
+	margin: 0.5em 0;
+	font-size: 50%;
+	letter-spacing: 0;
+	color: #d2d5d4;
+}
+
+/* Top Navigation Style */
+.codrops-links {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.codrops-links::after {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 1px;
+	height: 100%;
+	background: rgba(255,255,255,0.2);
+	content: '';
+	-webkit-transform: rotate3d(0,0,1,22.5deg);
+	transform: rotate3d(0,0,1,22.5deg);
+}
+
+.codrops-icon {
+	display: inline-block;
+	margin: 0.5em;
+	padding: 0em 0;
+	width: 1.5em;
+	text-decoration: none;
+}
+
+.codrops-icon span {
+	display: none;
+}
+
+.codrops-icon:before {
+	margin: 0 5px;
+	text-transform: none;
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-family: 'codropsicons';
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+}
+
+.codrops-icon--drop:before {
+	content: "\e001";
+}
+
+.codrops-icon--prev:before {
+	content: "\e004";
+}
+
+/* Demo links */
+.codrops-demos {
+	margin: 2em 0 0;
+}
+
+.codrops-demos a {
+	display: inline-block;
+	margin: 0 0.5em;
+}
+
+.codrops-demos a.current-demo {
+	color: #333;
+}
+
+.container {
+	display: flex;
+  align-items: center;
+  justify-content: center;
+	background: #2C292F no-repeat left 50% bottom 40px;
+}
+
+.align-top {
+	 align-self: flex-start;
+}
+
+.align-middle {
+	background: #2C292F no-repeat left 50% bottom 40px;
+}
+
+
+.align-middle > a {
+	class=hvr-float-shadow
+	background: #2C292F no-repeat left 50% bottom 40px;
+}
+
+.align-bottom {
+	align-self: flex-end;
+}
+
+/* Float Shadow */
+.hvr-float-shadow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-float-shadow:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  /* W3C */
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform, opacity;
+  transition-property: transform, opacity;
+}
+.hvr-float-shadow:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  /* move the element up by 5px */
+}
+.hvr-float-shadow:hover:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:active:before {
+  opacity: 1;
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+  /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+}
